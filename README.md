@@ -1,8 +1,20 @@
 # DevStackSetup
 Set of scripts to setup an OpenStack DevStack service in a VM.
 
-## Source
+## Source and Credits
 The scripts were basically taken from Youtube tutorial about [setting up DevStack](https://www.youtube.com/watch?v=bh2CHlxyIvw) (Video is in Portuguese) and the [DevStack setup page](https://docs.openstack.org/devstack/latest/)
+
+## Instructions
+Make sure to have [Vagrant](https://www.vagrantup.com/downloads) and [VirtualBox](https://www.virtualbox.org/) installed.
+In the root directory for the project, run:
+```bash
+vagrant up
+```
+Vagrant will create an Ubuntu 20.04 instance machine that will host the DevStack.
+After the machine has been created, ssh into it with `vagrant ssh`.
+Switch to the stack user with `sudo su stack` and navigate to the /opt/stack/devstack directory.
+Now run the "stack.sh" script.
+Make sure to check the Troubleshoot sesssion for any issues.
 
 ## Troubleshoot
 I had to make a few changes to the scripts and setup as I hit issues not shown in the video.
